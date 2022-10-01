@@ -3,15 +3,15 @@ const express = require("express");
 const { ApolloServer, gql } = require("apollo-server-express");
 
 const { typeDefs, resolvers } = require("./schemas");
-const { authMiddleware } = require('./utils/auth');
+// !Set up middleware
+// const { authMiddleware } = require('./utils/auth');
 const db = require("./config/connection");
 
 const PORT = process.env.PORT || 3001;
 const app = express();
 const server = new ApolloServer({
   typeDefs,
-  resolvers,
-  context: authMiddleware
+  resolvers
 });
 
 app.use(express.urlencoded({ extended: false }));
@@ -26,12 +26,6 @@ if (process.env.NODE_ENV === "production") {
   app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "../client/build/index.html"));
   });
-// * suggested update from Josh
-
-  // wildcard for pages not found
-  // app.get('*', (req, res) => {
-  // res.status(404).sendFile(path.join(__dirname, './public/404.html'));
-  // })
 }
 
 // Create a new instance of an Apollo server with the GraphQL schema

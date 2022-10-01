@@ -1,26 +1,26 @@
 {
-    "name": "news-blog-server",
-    "version": "1.0.0",
-    "description": "",
-    "main": "server.js",
-    "scripts": {
-      "start": "node server.js",
-      "watch": "nodemon",
-      "seed": "node config/seeds.js"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-      "apollo-server-express": "^3.10.2",
-      "bcrypt": "^5.0.1",
-      "express": "^4.18.1",
-      "graphql": "^16.6.0",
-      "jsonwebtoken": "^8.5.1",
-      "mongoose": "^6.5.4",
-      "stripe": "^10.7.0"
-    },
-    "devDependencies": {
-      "nodemon": "^2.0.19"
-    }
-  }
+  "name": "news-blog-server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "watch": "nodemon",
+    "seed": "node config/seeds.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^3.10.2",
+    "bcrypt": "^5.0.1",
+    "express": "^4.18.1",
+    "graphql": "^16.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.5.4",
+    "stripe": "^10.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "description": ""
+}
