@@ -8,8 +8,19 @@ const typeDefs = gql `
         email: String
     }
 
+    type Article {
+        _id: ID
+        title: String 
+        overview: String
+        image: String
+        datePosted: String
+        user: [User]
+    
+    }
+
     type Query {
         users: User
+        articles: Article
     }
 `;
 

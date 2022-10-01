@@ -22,3 +22,7 @@ const articleSchema = {
     },
     user: [User.schema]
 }
+
+const Article = mongoose.model('Article', articleSchema);
+
+module.exports = Article;
